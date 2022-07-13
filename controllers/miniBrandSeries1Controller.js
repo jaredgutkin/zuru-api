@@ -5,7 +5,7 @@ const MBS1 = require('../models/miniBrandSeries1Model')
 //@access Public
 exports.getMBS1 = async (req, res, next) => {
     try {
-        const mbs1 = await MBS1.find()
+        const mbs1 = await MBS1.find().sort({itemNo: 1})
 
         return res.status(200).json(
             {data: mbs1}
