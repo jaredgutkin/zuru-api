@@ -43,4 +43,4 @@ const miniBrandSeries1Schema = mongoose.Schema({
     },
 })
 
-module.exports = mongoose.model('mbs1', miniBrandSeries1Schema, 'miniBrandSeries1')
+module.exports = mongoose.model('MBS1', miniBrandSeries1Schema, 'miniBrandSeries1')

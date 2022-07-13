@@ -7,11 +7,9 @@ exports.getMBS1 = async (req, res, next) => {
     try {
         const mbs1 = await MBS1.find()
 
-        return res.status(200).json({
-            success: true,
-            count: mbs1.length,
-            data: mbs1
-        })
+        return res.status(200).json(
+            {data: mbs1}
+        )
     } catch (err) {
         return res.status(500).json({
             success: false,
@@ -19,6 +17,7 @@ exports.getMBS1 = async (req, res, next) => {
         })
     }
 }
+
 
 // @desc add MBS1
 //@route POST /api/mbs1/
@@ -38,7 +37,7 @@ exports.addMBS1 = async (req, res, next) => {
             image, 
             rarity, 
             specialFeatures
-        })
+    })
 
         return res.status(201).json({
             id: mbs1.id,

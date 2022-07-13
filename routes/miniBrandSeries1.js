@@ -6,4 +6,5 @@ router
     .get(getMBS1)
     .post(addMBS1)
 
+
 module.exports = router
