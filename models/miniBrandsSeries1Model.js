@@ -33,6 +33,9 @@ const miniBrandsSeries1Schema = mongoose.Schema({
         type: String,
         // required: true
     },
+    realImage: {
+        type: String,
+    },
     rarity: {
         type: String,
         // required: true

@@ -68,3 +68,29 @@ exports.addMBS1 = async (req, res, next) => {
         }
     }
 }
+
+//@desc Update MiniBrands entry
+//@route PUT /api/mbs1/:itemNo
+//@acess Public
+exports.updateMBS1 = async (req, res) => {
+    try {
+        Object.keys(req.body).forEach(key => {
+        if ( req.body[key] === null || req.body[key] === 'undefined' || req.body[key] === "" ){
+            delete req.body[key]
+        }
+    })
+    const updatedMBS1 = await MBS1.findOneAndUpdate(
+        {itemNo: req.body.itemNo},
+        {
+            $set: req.body
+        }
+    )
+    res.status(200).json(updatedMBS1)
+
+    } catch (err) {
+        return res.status(500).json({
+            success: false,
+            error: 'Server Error'
+    })
+}
+}
