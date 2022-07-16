@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const { getMBS1, addMBS1 } = require('../controllers/miniBrandSeries1Controller')
+const { getMBS1, addMBS1 } = require('../controllers/miniBrandsSeries1Controller')
 router
     .route('/')
     .get(getMBS1)

@@ -1,4 +1,4 @@
-const MBS1 = require('../models/miniBrandSeries1Model')
+const MBS1 = require('../models/miniBrandsSeries1Model')
 
 // @desc Get all mini brands series 1
 //@route GET /api/mbs1/
@@ -24,7 +24,7 @@ exports.getMBS1 = async (req, res, next) => {
 //@access Public
 exports.addMBS1 = async (req, res, next) => {
     try {
-        const { set, setName, seriesNo, item, itemNo, itemName, brandName, image, rarity, specialFeatures } = req.body
+        const { set, setName, seriesNo, item, itemNo, itemName, brandName, image, rarity, specialFeature } = req.body
 
         const mbs1 = await MBS1.create({
             set, 
@@ -36,7 +36,7 @@ exports.addMBS1 = async (req, res, next) => {
             brandName, 
             image, 
             rarity, 
-            specialFeatures
+            specialFeature,
     })
 
         return res.status(201).json({

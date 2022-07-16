@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const miniBrandSeries1Schema = mongoose.Schema({
+const miniBrandsSeries1Schema = mongoose.Schema({
     set: {
         type: String,
         // required: true
@@ -43,4 +43,4 @@ const miniBrandSeries1Schema = mongoose.Schema({
     },
 })
 
-module.exports = mongoose.model('MBS1', miniBrandSeries1Schema, 'miniBrandSeries1')
+module.exports = mongoose.model('MBS1', miniBrandsSeries1Schema, 'miniBrandsSeries1')

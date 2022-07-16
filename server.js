@@ -19,7 +19,7 @@ app.get('/', (req, res)=>{
     res.sendFile(__dirname + '/index.html')
 })
 
-app.use('/api/mbs1', require('./routes/miniBrandSeries1'))
+app.use('/api/mbs1', require('./routes/miniBrandsSeries1'))
 
 app.listen(PORT, () => {
     console.log(`server is running on port ${PORT}`.yellow.bold)
